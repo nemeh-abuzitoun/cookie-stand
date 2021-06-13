@@ -9,31 +9,49 @@ let SeattleBranch={
     avaregeAmount:0,
     costomer[],
     customerPerHour:function(){
-        this.customerPerHour = getRandomNumber(23,65);
-
+        this.customerPerHour = getRandomNumber( minHourlyCustomers, maxHourlyCustomers);
+return this.customerPerHour;
 }
-let seattleBranch  = document.createElement("BUTTON");
+
+let seattleBranch  = document.createElement("sales");
 seattleBranch .innerHTML = "CLICK ME";                  
 document.body.appendChild(seattleBranch );            
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    function getRandomNumber(23, 65) {
-        min = Math.ceil(23);
-        max = Math.floor(65);
-        return Math.floor(Math.random() * (65 - 23 + 1) + 23); //The maximum is inclusive and the minimum is inclusive
-   
+fisrtbranch: function(){
+    let seattleBranch = getElementBYId("sales");
+    let branchName = document.createElementNS('branch2');
+    seattleBranch.appendChild(name);
+   branchName.textContent = branch1.name;
+ let table = document.createElementNS('table1');
+ seattleBranch.appendChild(table);
+ for (let i=0; i < branch1.costomer.length; i++)
+{
+    let lilst = document.createElementNS('li');
+    table.appendChild(lilst);
+    lilst.textContent = `${shiftTime[i]}`: ${branch1.costomer[i]}  cookies`;
+    branch1.avaregeAmount = branch1.avaregeAmount + brtanch1.costomer[i];
+    if (i==14){
+        lilist.textContent =`avaregeAmount : ${branch1.avaregeAmount} cookies;
+    }
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+function getRandomNumber (min,max){
+    return Math.floor(Math.random() * (max - min) + min);
+}
+branch1.customerPerHour()
+console.log(branch1.costomer);
+branch1.fisrtbranch();
