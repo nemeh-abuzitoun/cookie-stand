@@ -1,6 +1,12 @@
 
 'use strict';
 
+
+
+let branchProfile = document.getElementById('branchprofile');
+let branchForm = document.getElementById('branchForm');
+
+
 let time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let branch1 = {
     name: 'Seattle',
@@ -206,3 +212,31 @@ let branch5 = {
 branch5.amounts()
 console.log(branch5.cosTom);
 branch5.firstResut();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function formSubmission(event) {
+    event.preventDefault();
+    let name = event.target.branchName.value;
+    let location =event.target.branchName;
+    let workingHours = event.target.branchName;
+    let newbranch = new branch(name, location, workingHours);
+   newbranch.branchProfile(branchForm);
+    newbranch.render();
+  
+    console.log(newbranch);
+  }
+  
+  branchForm.addEventListener('submit', formSubmission);
